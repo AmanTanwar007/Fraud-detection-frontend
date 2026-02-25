@@ -1,4 +1,4 @@
-# Fraud-detection-frontend
+# Fraud-detection
 
 # FraudShield AI
 
