@@ -5,11 +5,10 @@
   box-sizing: border-box;
 }
 
-/* Fonts & Body */
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f4f6f8;
-  color: #333;
+  background-color: #121921;
+  color: #e0e0e0;
 }
 
 /* Header */
@@ -18,9 +17,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: linear-gradient(90deg, #4b6cb7, #182848);
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
   color: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-bottom: 1px solid #2c5364;
 }
 
 header .logo {
@@ -45,20 +45,20 @@ nav ul {
 }
 
 nav ul li a {
-  color: white;
+  color: #e0e0e0;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
 }
 
 nav ul li a:hover {
-  color: #ffd700;
+  color: #4b9ce2;
 }
 
 /* Layout */
 .container {
   display: flex;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 40px auto;
   gap: 30px;
   padding: 0 20px;
@@ -66,10 +66,10 @@ nav ul li a:hover {
 
 .sidebar {
   flex: 0 0 220px;
-  background-color: #fff;
+  background-color: #1f2a38;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
 
 .sidebar ul {
@@ -81,13 +81,13 @@ nav ul li a:hover {
 
 .sidebar ul li a {
   text-decoration: none;
-  color: #182848;
+  color: #cfd8dc;
   font-weight: 600;
   transition: 0.3s;
 }
 
 .sidebar ul li a:hover {
-  color: #4b6cb7;
+  color: #4b9ce2;
 }
 
 /* Main Content */
@@ -100,10 +100,10 @@ nav ul li a:hover {
 
 /* Cards */
 .card {
-  background-color: white;
+  background-color: #2b3a50;
   border-radius: 12px;
   padding: 25px 30px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
   transition: transform 0.3s;
 }
 
@@ -121,7 +121,7 @@ nav ul li a:hover {
 .stat-card {
   flex: 1;
   min-width: 150px;
-  background: #4b6cb7;
+  background: linear-gradient(135deg, #4b9ce2, #357ab8);
   color: white;
   text-align: center;
   border-radius: 12px;
@@ -148,24 +148,26 @@ nav ul li a:hover {
 .upload-section input[type="file"] {
   padding: 10px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #4b9ce2;
   margin-right: 12px;
+  background-color: #1f2a38;
+  color: #e0e0e0;
 }
 
 button {
-  background-color: #4b6cb7;
+  background-color: #4b9ce2;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 8px;
   font-weight: 600;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
   transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-  background-color: #3a54a0;
+  background-color: #357ab8;
   transform: translateY(-2px);
 }
 
@@ -174,8 +176,10 @@ button:hover {
   padding: 8px 10px;
   margin-bottom: 12px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #4b9ce2;
   width: 250px;
+  background-color: #1f2a38;
+  color: #e0e0e0;
 }
 
 table {
@@ -183,6 +187,7 @@ table {
   border-collapse: collapse;
   margin-top: 10px;
   font-size: 0.95rem;
+  color: #e0e0e0;
 }
 
 th, td {
@@ -191,27 +196,27 @@ th, td {
 }
 
 th {
-  background: #4b6cb7;
+  background: #4b9ce2;
   color: white;
   font-weight: 600;
 }
 
 tr:nth-child(even) {
-  background: #f7f9fc;
+  background: #1f2a38;
 }
 
 tr:hover {
-  background: #e2e6f0;
+  background: #34495e;
 }
 
 /* Status Badges */
 td.status-safe {
-  color: green;
+  color: #2ecc71;
   font-weight: 700;
 }
 
 td.status-fraud {
-  color: red;
+  color: #e74c3c;
   font-weight: 700;
 }
 
@@ -219,7 +224,7 @@ td.status-fraud {
 footer {
   text-align: center;
   padding: 20px 0;
-  background: #182848;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
   color: white;
   margin-top: 50px;
   font-size: 0.9rem;
