@@ -1,2 +1,19 @@
 # Fraud-detection-frontend
-Frontend for BackHackers AI Fraud Detection platform. Upload CSV transactions and visualize potential fraud in a sleek, futuristic UI built with HTML, CSS, and JavaScript
+# FraudShield AI Frontend
+
+Modern, sleek frontend for the FraudShield AI Fraud Detection platform.
+
+## Features
+- Upload CSV transaction data
+- Dynamic table displaying potential fraud
+- Futuristic UI with sidebar navigation
+- Responsive layout for desktop & mobile
+
+## Tech Stack
+- HTML, CSS, JavaScript
+
+## Usage
+1. Open `index.html` in a browser
+2. Upload CSV file
+3. View detection results
+4. AI integration coming soon
