@@ -1,5 +1,6 @@
 # Fraud-detection-frontend
-# FraudShield AI Frontend
+
+# FraudShield AI
 
 Modern, sleek frontend for the FraudShield AI Fraud Detection platform.
 
