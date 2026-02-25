@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FraudShield AI Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="libs/chart.min.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo">
+      <h1>FraudShield AI</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Layout -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#">Upload Transactions</a></li>
+        <li><a href="#">Detection History</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Stats Cards -->
+      <section class="stats-cards">
+        <div class="card stat-card">
+          <h3>Total Transactions</h3>
+          <p id="totalTx">0</p>
+        </div>
+        <div class="card stat-card">
+          <h3>Total Fraud</h3>
+          <p id="totalFraud">0</p>
+        </div>
+        <div class="card stat-card">
+          <h3>Total Safe</h3>
+          <p id="totalSafe">0</p>
+        </div>
+        <div class="card stat-card">
+          <h3>Fraud %</h3>
+          <p id="fraudPercent">0%</p>
+        </div>
+      </section>
+
+      <!-- Upload Section -->
+      <section class="upload-section card">
+        <h2>Upload Transaction CSV</h2>
+        <input type="file" id="fileInput" accept=".csv">
+        <button id="detectBtn">Run Detection</button>
+        <button id="downloadBtn">Download CSV</button>
+      </section>
+
+      <!-- Chart Section -->
+      <section class="chart-section card">
+        <h2>Fraud Overview</h2>
+        <canvas id="fraudChart" height="150"></canvas>
+      </section>
+
+      <!-- Results Table -->
+      <section class="results-section card">
+        <h2>Detection Results</h2>
+        <input type="text" id="searchInput" placeholder="Search by Transaction ID">
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>Transaction ID</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Project by Aman Singh Tanwar, IILM University</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
