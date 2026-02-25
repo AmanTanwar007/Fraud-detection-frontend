@@ -3,99 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FraudShield AI Dashboard</title>
+  <title>Fraud Detection Dashboard</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="libs/chart.min.js"></script>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <img src="assets/logo.png" alt="Logo">
-      <h1>FraudShield AI</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Reports</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <div class="logo">
+    <img src="assets/logo.png" alt="Logo">
+    <h1>FraudShield AI</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#upload">Upload</a></li>
+      <li><a href="#charts">Overview</a></li>
+      <li><a href="#reports">Reports</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- Layout -->
-  <div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <ul>
-        <li><a href="#">Upload Transactions</a></li>
-        <li><a href="#">Detection History</a></li>
-        <li><a href="#">Reports</a></li>
-        <li><a href="#">Settings</a></li>
-      </ul>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- Stats Cards -->
-      <section class="stats-cards">
-        <div class="card stat-card">
-          <h3>Total Transactions</h3>
-          <p id="totalTx">0</p>
-        </div>
-        <div class="card stat-card">
-          <h3>Total Fraud</h3>
-          <p id="totalFraud">0</p>
-        </div>
-        <div class="card stat-card">
-          <h3>Total Safe</h3>
-          <p id="totalSafe">0</p>
-        </div>
-        <div class="card stat-card">
-          <h3>Fraud %</h3>
-          <p id="fraudPercent">0%</p>
-        </div>
-      </section>
-
-      <!-- Upload Section -->
-      <section class="upload-section card">
-        <h2>Upload Transaction CSV</h2>
-        <input type="file" id="fileInput" accept=".csv">
-        <button id="detectBtn">Run Detection</button>
-        <button id="downloadBtn">Download CSV</button>
-      </section>
-
-      <!-- Chart Section -->
-      <section class="chart-section card">
-        <h2>Fraud Overview</h2>
-        <canvas id="fraudChart" height="150"></canvas>
-      </section>
-
-      <!-- Results Table -->
-      <section class="results-section card">
-        <h2>Detection Results</h2>
-        <input type="text" id="searchInput" placeholder="Search by Transaction ID">
-        <table id="resultsTable">
-          <thead>
-            <tr>
-              <th>Transaction ID</th>
-              <th>Amount</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </section>
-    </main>
+<div class="container">
+  <div class="sidebar">
+    <ul>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#upload">Upload CSV</a></li>
+      <li><a href="#charts">Overview</a></li>
+      <li><a href="#reports">Reports</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>Project by Aman Singh Tanwar, IILM University</p>
-  </footer>
+  <div class="main-content">
 
-  <script src="script.js"></script>
+    <!-- Dashboard Stats -->
+    <section id="dashboard" class="stats-cards">
+      <div class="stat-card">
+        <h3>Total Transactions</h3>
+        <p id="total-transactions">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Fraud</h3>
+        <p id="total-fraud">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Safe</h3>
+        <p id="total-safe">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Fraud %</h3>
+        <p id="fraud-percent">0%</p>
+      </div>
+    </section>
+
+    <!-- CSV Upload -->
+    <section id="upload" class="upload-section card">
+      <h2>Upload Transactions CSV</h2>
+      <input type="file" id="csvFile" accept=".csv">
+      <button id="runDetection">Run Detection</button>
+      <button id="downloadCsv">Download CSV</button>
+    </section>
+
+    <!-- Fraud Overview Chart -->
+    <section id="charts" class="chart-section card">
+      <h2>Fraud Overview</h2>
+      <canvas id="fraudChart" width="400" height="200"></canvas>
+    </section>
+
+    <!-- Results Table -->
+    <section id="reports" class="results-section card">
+      <h2>Transaction Reports</h2>
+      <input type="text" id="searchInput" placeholder="Search Transaction ID">
+      <table>
+        <thead>
+          <tr>
+            <th>Transaction ID</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="transactionTable"></tbody>
+      </table>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>This project demonstrates a professional frontend dashboard for Fraud Detection using AI. The AI detection is simulated in the frontend for demo purposes. Features include CSV upload, dynamic table, fraud overview chart, and download functionality.</p>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 FraudShield AI | Designed by Aman Singh Tanwar
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
