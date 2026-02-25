@@ -18,3 +18,5 @@ Modern, sleek frontend for the FraudShield AI Fraud Detection platform.
 2. Upload CSV file
 3. View detection results
 4. AI integration coming soon
+
+This is a frontend-only project. AI detection is simulated in the frontend for demonstration purposes. No backend or real AI model is connected yet.
