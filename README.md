@@ -1,8 +1,5 @@
 # Fraud-detection-frontend
 
-# FraudShield AI
-
-Modern, sleek frontend for the FraudShield AI Fraud Detection platform.
 
 ## Features
 - Upload CSV transaction data
